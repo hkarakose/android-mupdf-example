@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/topBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/bar"
+		android:minHeight="48dp"
+		android:paddingBottom="0dp"
+		android:paddingLeft="0dp"
+		android:paddingRight="0dp"
+		android:paddingTop="0dp">
+
+	<ImageButton
+			android:id="@+id/searchButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:contentDescription="@string/search_document"
+			android:src="@drawable/ic_magnifying_glass"
+			android:visibility="visible"
+			/>
+
+	<!--<ImageButton-->
+	<!--android:id="@+id/outlineButton"-->
+	<!--android:layout_width="48dp"-->
+	<!--android:layout_height="48dp"-->
+	<!--android:layout_alignParentRight="true"-->
+	<!--android:layout_centerVertical="true"-->
+	<!--android:layout_toLeftOf="@+id/searchButton"-->
+	<!--android:contentDescription="@string/search_document"-->
+	<!--android:src="@drawable/ic_action_list_2" />-->
+
+	<!--
+	<ImageButton
+		android:id="@+id/linkButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_toLeftOf="@+id/outlineButton"
+		android:contentDescription="@string/link_control"
+		android:src="@drawable/ic_link" />
+	-->
+
+	<!--<ImageView-->
+			<!--android:id="@+id/cancel"-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:layout_alignParentLeft="true"-->
+			<!--android:layout_centerVertical="true"-->
+			<!--android:src="@drawable/ic_cancel"/>-->
+
+	<EditText
+			android:id="@+id/searchText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/searchBack"
+			android:layout_toRightOf="@+id/cancel"
+			android:hint="Search"
+			android:inputType="text"
+			android:singleLine="true"/>
+
+	<Button
+			android:id="@+id/searchBack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/searchForward"
+			android:src="@drawable/ic_arrow_left"
+			android:text="Back"
+			android:onClick="backwardClicked"
+			/>
+
+	<Button
+			android:id="@+id/searchForward"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/ic_arrow_right"
+			android:text="Forward"
+			android:onClick="forwardClicked"
+			/>
+
+
+	<!--</ViewSwitcher>-->
+
+	<!--<RelativeLayout-->
+	<!--android:id="@+id/lowerButtons"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_alignParentBottom="true"-->
+	<!--android:layout_centerHorizontal="true" >-->
+
+	<!--<FrameLayout-->
+	<!--android:id="@+id/PreviewBarHolder"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="140dp"-->
+	<!--android:layout_alignParentBottom="true"-->
+	<!--android:layout_centerHorizontal="true"-->
+	<!--android:background="@color/bar" >-->
+	<!--</FrameLayout>-->
+	<!--</RelativeLayout>-->
+
+</RelativeLayout>

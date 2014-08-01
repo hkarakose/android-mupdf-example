@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/embeddedVideoLayout"
+		android:background="#000000"
+		android:layout_width="fill_parent"
+		android:layout_height="0.0dip">
+
+	<com.example.embedded.ResizableVideoView
+			android:layout_gravity="center"
+			android:id="@+id/myNewVideoView"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+
+	<Button
+			android:id="@+id/media_play"
+			android:background="@drawable/v_custom_play"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"/>
+
+	<RelativeLayout
+			android:id="@+id/media_control_bar"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@id/myNewVideoView"
+			android:layout_alignRight="@id/myNewVideoView"
+			android:layout_alignParentBottom="true">
+
+		<SeekBar
+				android:id="@+id/media_seek_bar"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:progressDrawable="@drawable/v_seekbar_progress"
+				android:thumb="@drawable/v_slider_vertical"/>
+
+		<TextView
+				android:textColor="#FFFFFF"
+				android:gravity="bottom"
+				android:id="@+id/played_duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="00.00"
+				android:layout_alignLeft="@id/media_seek_bar"
+				android:layout_alignBottom="@id/media_seek_bar"/>
+
+		<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignRight="@id/media_seek_bar"
+				android:layout_alignBottom="@id/media_seek_bar"
+				android:layout_alignParentRight="true">
+
+			<TextView
+					android:textColor="#FFFFFF"
+					android:gravity="bottom"
+					android:id="@+id/remaining_duration"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="00.00"
+					android:layout_alignParentRight="true"/>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>
